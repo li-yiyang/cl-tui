@@ -12,8 +12,11 @@ tested. Please, report bugs either on
 [SourceForge's](https://sourceforge.net/p/cl-tui/tickets/) issue tracker.
 
 Supported implementations are SBCL, CCL. I want to also support ECL and CLISP
-but ECL currently can't build osicat (investigated by osicat developers) and
+but ~~ECL currently can't build osicat (investigated by osicat developers)~~ and
 CLISP had a lot of issues with ncurses. Any help with CLISP is appreciated.
+
+> ryo's note: replaced `osicat` with `uiop:getenv`, so even on ECL, it shall
+> be able to compile. (tested on alpine and macOS)
 
 `cl-tui` is supposed to be a complete abstraction so if you have to use
 `cl-charms` directly for some reason please submit an issue describing your use-case.

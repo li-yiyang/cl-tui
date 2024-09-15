@@ -8,7 +8,11 @@
   (when *running*
     (error "Screen is already initialized"))
   (setf *running* t)
-  (sunless (osicat:environment-variable "ESCDELAY")
+  (sunless (uiop:getenv "ESCDELAY")
+    ;; ryo's note: old `cl-tui' use `osicat' to get env var,
+    ;; here replaced the `osicat' with `uiop:getenv'
+    ;; no need for `osicat' (possibly)
+    ;; (osicat:environment-variable "ESCDELAY")
     (setf it "25"))
   (charms/ll:initscr)
   (sunless *non-blocking-window*

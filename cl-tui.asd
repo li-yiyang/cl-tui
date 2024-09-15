@@ -21,4 +21,5 @@
                  anaphora
                  split-sequence
                  cl-containers
-                 osicat))
+                 ;; osicat
+		 ))
